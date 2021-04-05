@@ -1,10 +1,15 @@
 // Variables
-$main-font: Helvetica, sans-serif;
-$primary-color: #333;
-$background-color: #ffe;
+$main-font: Arial, sans-serif;
+
+// maps
+$font-colors: (
+  "primary": #333,
+  "secondary": #ffe,
+  "secondary": rgb(79, 231, 79),
+);
 
 body {
-  font: 100% $main-font;
-  color: $primary-color;
-  background: $background-color;
+  font-family: $main-font;
+  color: map-get($font-colors, primary); // use map
+  background: get-map($font-colors, secondary);
 }
