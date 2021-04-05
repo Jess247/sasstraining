@@ -2,14 +2,44 @@
 $main-font: Arial, sans-serif;
 
 // maps
-$font-colors: (
+$colors: (
   "primary": #333,
   "secondary": #ffe,
-  "secondary": rgb(79, 231, 79),
+  "accent": rgb(79, 231, 79),
 );
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: $main-font;
-  color: map-get($font-colors, primary); // use map
-  background: get-map($font-colors, secondary);
+  color: map-get($colors, primary);
+  background: map-get($colors, secondary);
+}
+
+// nesting
+.header {
+  display: flex;
+  width: 100%;
+  height: 10rem;
+  padding: 4rem;
+  justify-content: center;
+  background: map-get($colors, primary);
+  // header_title class
+  #{&}_title {
+    color: map-get($colors, secondary);
+
+    // hover
+    &:hover {
+      color: map-get($colors, accent);
+    }
+  }
+}
+
+main {
+  width: 80vw;
+  margin: 0 auto;
 }
