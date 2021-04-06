@@ -1,10 +1,19 @@
 @import "resets"; // use _resets file
 @import "variables"; // use variables from seperate file
 
+// function for colors
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
 body {
   font-family: $main-font;
-  color: map-get($colors, primary);
-  background: map-get($colors, secondary);
+  // very long alternative below
+  // color: map-get($colors, primary);
+  // background: map-get($colors, secondary);
+
+  color: color(primary);
+  background: color(secondary);
 }
 
 // nesting
@@ -14,19 +23,21 @@ body {
   height: 10rem;
   padding: 4rem;
   justify-content: center;
-  background: map-get($colors, primary);
+  background: color(primary);
   // header_title class
   #{&}_title {
-    color: map-get($colors, secondary);
+    color: color(secondary);
 
     // hover
     &:hover {
-      color: map-get($colors, accent);
+      color: color(accent);
     }
   }
 }
 
-main {
+.main {
+  display: flex;
+
   width: 80vw;
   margin: 0 auto;
 }
