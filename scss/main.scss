@@ -1,45 +1,78 @@
-// Variables
-$main-font: Arial, sans-serif;
+@import "resets"; // use _resets file
+@import "variables"; // use variables from seperate file
 
-// maps
-$colors: (
-  "primary": #333,
-  "secondary": #ffe,
-  "accent": rgb(79, 231, 79),
-);
+// function for colors
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+// mixin with argument
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// change light to dark mode
+@mixin theme($dark-theme: true) {
+  @if $dark-theme {
+    background: darken(color(primary), 10%);
+    color: lighten(color(primary), 100%);
+  }
 }
 
 body {
   font-family: $main-font;
-  color: map-get($colors, primary);
-  background: map-get($colors, secondary);
+  // very long alternative below
+  // color: map-get($colors, primary);
+  // background: map-get($colors, secondary);
+
+  color: color(primary);
+  background: color(secondary);
 }
 
 // nesting
 .header {
-  display: flex;
+  // include mixin
+  @include flexCenter(column);
   width: 100%;
   height: 10rem;
   padding: 4rem;
   justify-content: center;
-  background: map-get($colors, primary);
   // header_title class
   #{&}_title {
-    color: map-get($colors, secondary);
+    font-weight: lighter;
 
     // hover
     &:hover {
-      color: map-get($colors, accent);
+      color: color(accent);
     }
+  }
+  #{&}_subtitle {
+    font-weight: 500;
   }
 }
 
-main {
+.main {
+  @include flexCenter(column);
   width: 80vw;
   margin: 0 auto;
+
+  .btn {
+    padding: 0.2rem;
+    background: color(accent);
+    color: color(secondary);
+    border: 2px solid darken(color(accent), 20%);
+    border-radius: 0.5rem;
+  }
+}
+
+// change themes
+.dark {
+  @include theme($dark-theme: true);
+}
+
+.light {
+  @include theme($dark-theme: false);
 }
