@@ -56,12 +56,21 @@ body {
 }
 
 .main {
-  @include flexCenter(row);
+  @include flexCenter(column);
   width: 80vw;
   margin: 0 auto;
+
+  .btn {
+    background: color(accent);
+    color: color(secondary);
+  }
 }
 
 // change themes
 .dark {
   @include theme($dark-theme: true);
+}
+
+.light {
+  @include theme($dark-theme: false);
 }
