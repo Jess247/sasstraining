@@ -6,6 +6,22 @@
   @return map-get($colors, $color-name);
 }
 
+// mixin with argument
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// change light to dark mode
+@mixin theme($dark-theme: true) {
+  @if $dark-theme {
+    background: darken(color(primary), 10%);
+    color: lighten(color(primary), 100%);
+  }
+}
+
 body {
   font-family: $main-font;
   // very long alternative below
@@ -18,7 +34,8 @@ body {
 
 // nesting
 .header {
-  display: flex;
+  // include mixin
+  @include flexCenter(column);
   width: 100%;
   height: 10rem;
   padding: 4rem;
@@ -33,11 +50,18 @@ body {
       color: color(accent);
     }
   }
+  #{&}_subtitle {
+    color: color(secondary);
+  }
 }
 
 .main {
-  display: flex;
-
+  @include flexCenter(row);
   width: 80vw;
   margin: 0 auto;
+}
+
+// change themes
+.dark {
+  @include theme($dark-theme: true);
 }
