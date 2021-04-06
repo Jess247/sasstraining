@@ -29,19 +29,18 @@ body {
   height: 10rem;
   padding: 4rem;
   justify-content: center;
-  background: #333;
 }
 
 .header .header_title {
-  color: #ffe;
+  font-weight: lighter;
 }
 
 .header .header_title:hover {
-  color: #4fe74f;
+  color: #089608;
 }
 
 .header .header_subtitle {
-  color: #ffe;
+  font-weight: 500;
 }
 
 .main {
@@ -63,8 +62,11 @@ body {
 }
 
 .main .btn {
-  background: #4fe74f;
+  padding: 0.2rem;
+  background: #089608;
   color: #ffe;
+  border: 2px solid #033503;
+  border-radius: 0.5rem;
 }
 
 .dark {

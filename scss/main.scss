@@ -40,10 +40,9 @@ body {
   height: 10rem;
   padding: 4rem;
   justify-content: center;
-  background: color(primary);
   // header_title class
   #{&}_title {
-    color: color(secondary);
+    font-weight: lighter;
 
     // hover
     &:hover {
@@ -51,7 +50,7 @@ body {
     }
   }
   #{&}_subtitle {
-    color: color(secondary);
+    font-weight: 500;
   }
 }
 
@@ -61,8 +60,11 @@ body {
   margin: 0 auto;
 
   .btn {
+    padding: 0.2rem;
     background: color(accent);
     color: color(secondary);
+    border: 2px solid darken(color(accent), 20%);
+    border-radius: 0.5rem;
   }
 }
 
