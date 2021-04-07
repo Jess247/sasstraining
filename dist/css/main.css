@@ -61,12 +61,20 @@ body {
   margin: 0 auto;
 }
 
-.main .btn {
+.main .btn, .main .btn-two {
   padding: 0.2rem;
   background: #089608;
   color: #ffe;
   border: 2px solid #033503;
   border-radius: 0.5rem;
+}
+
+.main .btn:hover, .main .btn-two:hover {
+  background: blue;
+}
+
+.main .btn-two:hover {
+  background: crimson;
 }
 
 @media (max-width: 500px) {

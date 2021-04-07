@@ -80,6 +80,18 @@ body {
     border-radius: 0.5rem;
   }
 
+  .btn:hover {
+    background: blue;
+  }
+
+  .btn-two {
+    @extend .btn;
+
+    &:hover {
+      background: crimson;
+    }
+  }
+
   @include mobile-only {
     flex-direction: column;
   }

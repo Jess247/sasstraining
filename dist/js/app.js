@@ -9,3 +9,7 @@ const themeBtn = document.querySelector('.btn').addEventListener('click', functi
     theme.classList.add('dark');
    }
 });
+
+const curiousBtn = document.querySelector('.btn-two').addEventListener('click', function() {
+    alert("Well there's nothing special here")
+});
