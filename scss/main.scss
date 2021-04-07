@@ -22,6 +22,19 @@
   }
 }
 
+// media @query
+@mixin mobile-only {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
 body {
   font-family: $main-font;
   // very long alternative below
@@ -55,7 +68,7 @@ body {
 }
 
 .main {
-  @include flexCenter(column);
+  @include flexCenter(row);
   width: 80vw;
   margin: 0 auto;
 
@@ -65,6 +78,10 @@ body {
     color: color(secondary);
     border: 2px solid darken(color(accent), 20%);
     border-radius: 0.5rem;
+  }
+
+  @include mobile-only {
+    flex-direction: column;
   }
 }
 
