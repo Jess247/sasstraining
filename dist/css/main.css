@@ -53,20 +53,37 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 80vw;
   margin: 0 auto;
 }
 
-.main .btn {
+.main .btn, .main .btn-two {
   padding: 0.2rem;
   background: #089608;
   color: #ffe;
   border: 2px solid #033503;
   border-radius: 0.5rem;
+}
+
+.main .btn:hover, .main .btn-two:hover {
+  background: blue;
+}
+
+.main .btn-two:hover {
+  background: crimson;
+}
+
+@media (max-width: 500px) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .dark {
