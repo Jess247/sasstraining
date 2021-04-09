@@ -1,0 +1,45 @@
+@import "resets"; // use _resets file
+@import "variables"; // use variables from seperate file
+
+// function for colors
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+// mixin with argument
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// change light to dark mode
+@mixin theme($dark-theme: true) {
+  @if $dark-theme {
+    background: darken(color(primary), 10%);
+    color: lighten(color(primary), 100%);
+  }
+}
+
+// media @query
+@mixin mobile-only {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+// change themes
+.dark {
+  @include theme($dark-theme: true);
+}
+
+.light {
+  @include theme($dark-theme: false);
+}
