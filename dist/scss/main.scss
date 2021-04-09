@@ -35,68 +35,6 @@
   }
 }
 
-body {
-  font-family: $main-font;
-  // very long alternative below
-  // color: map-get($colors, primary);
-  // background: map-get($colors, secondary);
-
-  color: color(primary);
-  background: color(secondary);
-}
-
-// nesting
-.header {
-  // include mixin
-  @include flexCenter(column);
-  width: 100%;
-  height: 10rem;
-  padding: 4rem;
-  justify-content: center;
-  // header_title class
-  #{&}_title {
-    font-weight: lighter;
-
-    // hover
-    &:hover {
-      color: color(accent);
-    }
-  }
-  #{&}_subtitle {
-    font-weight: 500;
-  }
-}
-
-.main {
-  @include flexCenter(row);
-  width: 80vw;
-  margin: 0 auto;
-
-  .btn {
-    padding: 0.2rem;
-    background: color(accent);
-    color: color(secondary);
-    border: 2px solid darken(color(accent), 20%);
-    border-radius: 0.5rem;
-  }
-
-  .btn:hover {
-    background: blue;
-  }
-
-  .btn-two {
-    @extend .btn;
-
-    &:hover {
-      background: crimson;
-    }
-  }
-
-  @include mobile-only {
-    flex-direction: column;
-  }
-}
-
 // change themes
 .dark {
   @include theme($dark-theme: true);
