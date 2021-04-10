@@ -54,10 +54,6 @@ body {
   color: #52b788;
 }
 
-.navbar #navBrand:hover {
-  scale: 0.5;
-}
-
 .navbar small {
   color: #52b788;
 }
