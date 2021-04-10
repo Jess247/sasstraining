@@ -12,10 +12,18 @@
     url("https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
       no-repeat center top;
   background-size: cover;
-  text-shadow: 5px 3px rgba(7, 7, 7, 0.5);
 
   &_name {
     font-size: 5rem;
+    font-weight: 400;
     padding-bottom: 1rem;
+    text-shadow: 5px 3px rgba(7, 7, 7, 0.5);
+    // border-bottom: 1px solid $secondary-color;
+
+    &--last {
+      color: $accent-color-warm;
+      font-size: 5.2rem;
+      font-weight: bold;
+    }
   }
 }

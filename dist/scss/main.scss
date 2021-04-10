@@ -12,6 +12,14 @@ body {
   top: 0rem;
   width: 100%;
   padding: 1rem;
+
+  #navLink:hover {
+    color: $accent-color-warm;
+  }
+
+  small {
+    color: $accent-color-warm;
+  }
 }
 
 main {
