@@ -45,8 +45,17 @@ body {
   padding: 1rem;
 }
 
+.navbar #navLink {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 .navbar #navLink:hover {
   color: #52b788;
+}
+
+.navbar #navBrand:hover {
+  scale: 0.5;
 }
 
 .navbar small {
@@ -67,6 +76,8 @@ main .social {
 main .social a {
   padding: 0.5rem;
   color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 main .social a:hover {

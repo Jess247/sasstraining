@@ -13,8 +13,16 @@ body {
   width: 100%;
   padding: 1rem;
 
+  #navLink {
+    @include transition-ease;
+  }
+
   #navLink:hover {
     color: $accent-color-warm;
+  }
+
+  #navBrand:hover {
+    scale: 0.5;
   }
 
   small {
@@ -34,6 +42,7 @@ main {
     a {
       padding: 0.5rem;
       color: $secondary-color;
+      @include transition-ease;
 
       &:hover {
         color: $accent-color-warm;
