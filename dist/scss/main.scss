@@ -1,45 +1,55 @@
-@import "resets"; // use _resets file
-@import "variables"; // use variables from seperate file
+@import "config";
+@import "home";
 
-// function for colors
-@function color($color-name) {
-  @return map-get($colors, $color-name);
+body {
+  background: $primary-color;
+  color: $secondary-color;
+  height: 100vh;
 }
 
-// mixin with argument
-@mixin flexCenter($direction) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: $direction;
-}
+.navbar {
+  position: fixed;
+  top: 0rem;
+  width: 100%;
+  padding: 1rem;
 
-// change light to dark mode
-@mixin theme($dark-theme: true) {
-  @if $dark-theme {
-    background: darken(color(primary), 10%);
-    color: lighten(color(primary), 100%);
+  #navLink {
+    @include transition-ease;
+  }
+
+  #navLink:hover {
+    color: $accent-color-warm;
+  }
+
+  small {
+    color: $accent-color-warm;
   }
 }
 
-// media @query
-@mixin mobile-only {
-  @media (max-width: $mobile) {
-    @content;
+main {
+  height: 100%;
+  width: 100%;
+
+  .social {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+
+    a {
+      padding: 0.5rem;
+      color: $secondary-color;
+      @include transition-ease;
+
+      &:hover {
+        color: $accent-color-warm;
+      }
+    }
   }
 }
-
-@mixin tablet-only {
-  @media (max-width: $tablet) {
-    @content;
-  }
-}
-
-// change themes
-.dark {
-  @include theme($dark-theme: true);
-}
-
-.light {
-  @include theme($dark-theme: false);
+footer {
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1rem;
+  padding: 0.9rem;
 }
