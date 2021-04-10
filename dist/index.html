@@ -8,15 +8,54 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Sass training</title>
+    <!-- 4160FFD8-36EE-40D1-A7F6-0A91D08C3C5E -->
 </head>
 <body class="dark">
-    <header class="header">
-        <h1 class="display-5">Hello</h1>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><small>My</small>Portfolio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button><!-- Hamburger -->
+                <div class="collapse navbar-collapse d-flex justify-content-center justify-content-sm-end" id="navContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
+    <main>
+        <section id="home">
+            <h1 class="title title_home">Hey! I am</h1>
+            <h2 id="home_name">Jess<span id="home_lastname">Singletary</span></h2>
+            <h2 id="home_">Web Developer, Web Designer & SEO Manager</h2>
+            <div class="social">
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+        </section>
+        <footer>&copy; 2021 Jessica Singletary</footer>
+    </main>
+    <script src="https://kit.fontawesome.com/28ec71db19.js" crossorigin="anonymous"></script>
+<!-- <script src="js/app.js"></script> -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/app.js"></script>
 </body>
 </html>
