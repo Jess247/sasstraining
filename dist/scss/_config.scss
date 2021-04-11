@@ -8,11 +8,18 @@
 
 // colors
 $primary-color: #333;
-$secondary-color: #fff;
 $accent-color-cold: #5cd9f0;
 $accent-color-warm: #52b788;
 
 // animation
 @mixin transition-ease {
   transition: all 0.3s ease-in-out;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
 }

@@ -3,7 +3,7 @@
 
 body {
   background: $primary-color;
-  color: $secondary-color;
+  color: set-text-color($primary-color);
   height: 100vh;
 }
 
@@ -37,7 +37,7 @@ main {
 
     a {
       padding: 0.5rem;
-      color: $secondary-color;
+      color: set-text-color($primary-color);
       @include transition-ease;
 
       &:hover {
