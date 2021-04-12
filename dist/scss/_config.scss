@@ -7,7 +7,7 @@
 }
 
 // colors
-$primary-color: #333;
+$primary-color: rgb(34, 34, 34);
 $accent-color-cold: #5cd9f0;
 $accent-color-warm: #52b788;
 
@@ -18,7 +18,7 @@ $accent-color-warm: #52b788;
 
 @function set-text-color($color) {
   @if (lightness($color) > 40%) {
-    @return #333;
+    @return #000;
   } @else {
     @return #fff;
   }
