@@ -86,13 +86,13 @@
       color: set-text-color(set-text-color($primary-color));
     }
   }
-}
 
-.social {
-  display: flex;
-  flex-direction: column;
-}
+  .social {
+    display: flex;
+    flex-direction: column;
+  }
 
-footer {
-  transform: rotate(90deg) translate(-4.7rem, -6rem);
+  footer {
+    transform: rotate(90deg) translate(-4.7rem, -6rem);
+  }
 }

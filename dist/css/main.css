@@ -205,7 +205,7 @@
   color: #000;
 }
 
-.social {
+.projects .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,7 +215,7 @@
           flex-direction: column;
 }
 
-footer {
+.projects footer {
   -webkit-transform: rotate(90deg) translate(-4.7rem, -6rem);
           transform: rotate(90deg) translate(-4.7rem, -6rem);
 }
@@ -231,6 +231,7 @@ body {
   top: 0rem;
   width: 100%;
   padding: 1rem;
+  z-index: 10;
 }
 
 .navbar #navLink {

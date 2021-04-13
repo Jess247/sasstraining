@@ -13,6 +13,7 @@ body {
   top: 0rem;
   width: 100%;
   padding: 1rem;
+  z-index: 10;
 
   #navLink {
     @include transition-ease;
