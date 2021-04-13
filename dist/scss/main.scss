@@ -1,7 +1,7 @@
 @import "config";
 @import "home";
 @import "about";
-
+@import "projects";
 body {
   background: $primary-color;
   color: set-text-color($primary-color);
@@ -31,7 +31,7 @@ main {
   height: 100%;
   width: 100%;
 
-  h3 {
+  .titles {
     color: $accent-color-warm;
   }
 
