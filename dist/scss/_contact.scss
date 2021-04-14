@@ -1,9 +1,10 @@
 #contact {
   height: 100%;
-  padding-top: 30vh;
+  padding-top: 20vh;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: linear-gradient(
       to right,
       rgba($primary-color, 0.8),
@@ -23,5 +24,24 @@
     grid-template-columns: 1fr;
     grid-gap: 2rem;
     font-size: 1.5rem;
+  }
+
+  .map-container-2 {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  .map-container-2 iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .social {
+    position: initial;
+    margin-top: 2rem;
   }
 }
