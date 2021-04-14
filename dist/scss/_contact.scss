@@ -1,0 +1,47 @@
+#contact {
+  height: 100%;
+  padding-top: 20vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.8),
+      rgba($primary-color, 0.6)
+    ),
+    url("https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+      no-repeat center top;
+  background-size: cover;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .map-container-2 {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
+  .map-container-2 iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .social {
+    position: initial;
+    margin-top: 2rem;
+  }
+}
