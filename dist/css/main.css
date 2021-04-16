@@ -110,7 +110,7 @@
 }
 
 .projects_bio-img {
-  height: 30vh;
+  height: 40vh;
   width: 100%;
   background: -webkit-gradient(linear, left top, right top, from(rgba(34, 34, 34, 0.8)), to(rgba(34, 34, 34, 0.6))), url("https://images.pexels.com/photos/6347968/pexels-photo-6347968.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") no-repeat center top;
   background: linear-gradient(to right, rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.6)), url("https://images.pexels.com/photos/6347968/pexels-photo-6347968.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") no-repeat center top;
@@ -271,6 +271,26 @@
 #contact .social {
   position: initial;
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  #about-bio {
+    font-size: 1.5rem;
+  }
+  .projects_bio-img {
+    height: 30vh;
+  }
+  .projects_items {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .titles {
+    font-size: 3rem;
+  }
+  #contact_list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 body {
