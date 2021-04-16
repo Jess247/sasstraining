@@ -293,6 +293,36 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .projects_bio-img {
+    height: 40vh;
+  }
+  .projects_items {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .projects .titles {
+    font-size: 3rem;
+  }
+  #contact_list {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .projects_bio-img {
+    height: 50vh;
+  }
+  .projects_items {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .projects .titles {
+    font-size: 3rem;
+  }
+}
+
 body {
   background: #222222;
   color: #fff;
