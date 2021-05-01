@@ -8,15 +8,16 @@
 
 #home {
   height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(34, 34, 34, 0.8)), to(rgba(34, 34, 34, 0.6))), url("https://images.pexels.com/photos/6347968/pexels-photo-6347968.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") no-repeat center top;
+  background: linear-gradient(to right, rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.6)), url("https://images.pexels.com/photos/6347968/pexels-photo-6347968.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") no-repeat center top;
+  background-size: cover;
   padding-top: 30vh;
   overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(34, 34, 34, 0.8)), to(rgba(34, 34, 34, 0.6))), url("https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center top;
-  background: linear-gradient(to right, rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.6)), url("https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center top;
-  background-size: cover;
 }
 
 #home_name {
@@ -222,6 +223,10 @@
 
 #contact {
   height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(34, 34, 34, 0.8)), to(rgba(34, 34, 34, 0.6))), url("https://images.pexels.com/photos/6347968/pexels-photo-6347968.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") no-repeat center top;
+  background: linear-gradient(to right, rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.6)), url("https://images.pexels.com/photos/6347968/pexels-photo-6347968.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500") no-repeat center top;
+  background-size: cover;
   padding-top: 20vh;
   overflow: hidden;
   display: -webkit-box;
@@ -234,9 +239,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(34, 34, 34, 0.8)), to(rgba(34, 34, 34, 0.6))), url("https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center top;
-  background: linear-gradient(to right, rgba(34, 34, 34, 0.8), rgba(34, 34, 34, 0.6)), url("https://images.pexels.com/photos/4065876/pexels-photo-4065876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center top;
-  background-size: cover;
 }
 
 #contact h1 {
